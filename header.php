@@ -22,11 +22,11 @@
                     </li>
 					
 					<li class="nav-item px-1">
-                        <a class="nav-link text-danger" href="listarUsuarios.php">Trabalhadores</a>
+                        <a class="nav-link text-danger" href="listarUsuario.php">Trabalhadores</a>
                     </li>
 					
 					<li class="nav-item px-1">
-                        <a class="nav-link text-danger" href="listarEmpresas.php">Empresas</a>
+                        <a class="nav-link text-danger" href="listarEmpresa.php">Empresas</a>
                     </li>
 
                     <li class="nav-item dropdown px-1 justify-content-end">
@@ -34,8 +34,8 @@
                             Cadastrar
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropCadastro">
-                            <a class="dropdown-item" href="formCadastro.php">Perfil de trabalho</a>
-                            <a class="dropdown-item" href="formLogin.php">Perfil de Empresa</a>
+                            <a class="dropdown-item" href="formTrabalhador.php">Perfil de trabalho</a>
+                            <a class="dropdown-item" href="formEmpresa.php">Perfil de Empresa</a>
                         </div>
                     </li>
 

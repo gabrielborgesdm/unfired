@@ -12,6 +12,7 @@ function configDB(){
 		header("Location: formErro.php");
 		die();
 	}else{
+        mysqli_set_charset($con,"utf8");
 		return $con;
 	}
 }

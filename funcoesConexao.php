@@ -8,3 +8,11 @@ function listarArea(){
 	(mysqli_num_rows($result) > 0)?: $result = null;
 	return $result;
 }
+
+function listarCargo(){
+	$con = configDB();
+	$sql = "SELECT * FROM cargo ";
+	$result = mysqli_query($con, $sql);
+	(mysqli_num_rows($result) > 0)?: $result = null;
+	return $result;
+}
