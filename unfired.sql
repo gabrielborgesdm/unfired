@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 16, 2018 at 04:01 PM
+-- Generation Time: Jun 17, 2018 at 03:40 AM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -80,16 +80,24 @@ CREATE TABLE `empresa` (
 
 CREATE TABLE `trabalhador` (
   `id` int(11) NOT NULL,
+  `id_area` int(11) NOT NULL,
+  `id_cargo` int(11) NOT NULL,
   `nome` varchar(80) COLLATE utf8_bin NOT NULL,
   `sexo` char(1) COLLATE utf8_bin NOT NULL,
   `email` varchar(100) COLLATE utf8_bin NOT NULL,
-  `telefone` int(11) NOT NULL,
-  `estado_cidade` varchar(80) COLLATE utf8_bin NOT NULL,
+  `telefone` varchar(18) COLLATE utf8_bin NOT NULL,
+  `cidade_estado` varchar(80) COLLATE utf8_bin NOT NULL,
   `data_nasc` date NOT NULL,
   `escolaridade` varchar(40) COLLATE utf8_bin NOT NULL,
-  `objetivos` varchar(250) COLLATE utf8_bin NOT NULL,
-  `arquivo` varchar(30) COLLATE utf8_bin NOT NULL
+  `curriculo` varchar(30) COLLATE utf8_bin DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `trabalhador`
+--
+
+INSERT INTO `trabalhador` (`id`, `id_area`, `id_cargo`, `nome`, `sexo`, `email`, `telefone`, `cidade_estado`, `data_nasc`, `escolaridade`, `curriculo`) VALUES
+(4, 6, 1, 'Joaocito', 'F', 'marlucisol@hotmail.com', '16997344120', 'Araraquara', '2018-06-06', 'Ensino médio completo', 'teste201806171238.docx');
 
 --
 -- Indexes for dumped tables
@@ -123,7 +131,9 @@ ALTER TABLE `empresa`
 ALTER TABLE `trabalhador`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `email_2` (`email`);
+  ADD UNIQUE KEY `email_2` (`email`),
+  ADD KEY `id_area` (`id_area`),
+  ADD KEY `id_cargo` (`id_cargo`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -145,6 +155,11 @@ ALTER TABLE `cargo`
 ALTER TABLE `empresa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `trabalhador`
+--
+ALTER TABLE `trabalhador`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
 -- Constraints for dumped tables
 --
 
@@ -153,6 +168,13 @@ ALTER TABLE `empresa`
 --
 ALTER TABLE `empresa`
   ADD CONSTRAINT `empresa_ibfk_1` FOREIGN KEY (`id_area`) REFERENCES `area` (`id`);
+
+--
+-- Constraints for table `trabalhador`
+--
+ALTER TABLE `trabalhador`
+  ADD CONSTRAINT `trabalhador_ibfk_1` FOREIGN KEY (`id_area`) REFERENCES `area` (`id`),
+  ADD CONSTRAINT `trabalhador_ibfk_2` FOREIGN KEY (`id_cargo`) REFERENCES `cargo` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
