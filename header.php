@@ -22,7 +22,7 @@
                     </li>
 					
 					<li class="nav-item px-1">
-                        <a class="nav-link text-danger" href="listarUsuario.php">Trabalhadores</a>
+                        <a class="nav-link text-danger" href="listarTrabalhador.php">Trabalhadores</a>
                     </li>
 					
 					<li class="nav-item px-1">

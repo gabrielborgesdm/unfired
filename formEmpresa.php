@@ -2,7 +2,7 @@
 session_start();
 include 'header.php';
 require_once"funcoesConexao.php";
-$result = listarArea();
+$result = listar("area");
 if($result == null){
 	$html = '<section class="container-fluid mt-4 mb-5">
 		<div class="row">

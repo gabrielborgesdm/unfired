@@ -2,8 +2,8 @@
 session_start();
 include 'header.php';
 require_once"funcoesConexao.php";
-$result = listarArea();
-$result2 = listarCargo();
+$result = listar("area");
+$result2 = listar("cargo");
 if($result == null || $result2 == null){
     if($result == null){
         $msg['nome'] = "áreas de trabalho";
@@ -12,7 +12,7 @@ if($result == null || $result2 == null){
         $msg['nome'] = "cargos de trabalho";
         $msg['link'] = "formCargo.php";
     }
-	$html = '
+    $html = '
     <section class="container-fluid mt-4 mb-5">
         <div class="row">
             <div class="col-11 col-md-10 col-lg-8 mx-auto border border-2 border-dark rounded divForm">
@@ -24,7 +24,7 @@ if($result == null || $result2 == null){
                 </div>
             </div>
         </div>
-	</section>';
+    </section>';
 }else{
 	
 	$html='
