@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 18, 2018 at 02:44 AM
+-- Generation Time: Jun 20, 2018 at 01:15 PM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -107,7 +107,8 @@ CREATE TABLE `trabalhador` (
 --
 
 INSERT INTO `trabalhador` (`id`, `id_area`, `id_cargo`, `nome`, `sexo`, `email`, `telefone`, `cidade_estado`, `data_nasc`, `escolaridade`, `curriculo`) VALUES
-(4, 6, 1, 'Joaocito', 'F', 'marlucisol@hotmail.com', '16997344120', 'Araraquara', '2018-06-06', 'Ensino médio completo', 'teste201806171238.docx');
+(4, 6, 1, 'Joaocito', 'F', 'marlucisol@hotmail.com', '16997344120', 'Araraquara', '2018-06-06', 'Ensino médio completo', 'teste201806171238.docx'),
+(5, 9, 1, 'Joca da Silva', 'M', 'jocadoribeirao@gmail.com', '16999999', 'Ribeirão Preto', '2018-06-21', 'Curso superior completo', 'testeDocs201806191038.docx');
 
 -- --------------------------------------------------------
 
@@ -222,7 +223,7 @@ ALTER TABLE `empresa`
 -- AUTO_INCREMENT for table `trabalhador`
 --
 ALTER TABLE `trabalhador`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Constraints for dumped tables
 --
