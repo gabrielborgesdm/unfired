@@ -16,7 +16,7 @@ if($result == null || $result2 == null){
     <section class="container-fluid mt-4 mb-5">
         <div class="row">
             <div class="col-11 col-md-10 col-lg-8 mx-auto border border-2 border-dark rounded divForm">
-                <h1 class="text-center mt-4 ">Perfil de usuário</h1>
+                <h1 class="text-center mt-4 ">Perfil de Trabalhador</h1>
                 <div class="col-12 mx-auto">
                     <p class="text-danger lead text-center">
                         Não há registro de '.$msg['nome'].' no sistema, cadastre <a href="'.$msg['link'].'">clicando aqui</a>.
@@ -31,9 +31,9 @@ if($result == null || $result2 == null){
 	<section class="container-fluid mt-4 mb-5">
             <div class="row">
                 <div class="col-11 col-md-10 col-lg-8 mx-auto border border-2 border-dark rounded divForm">
-                    <h1 class="text-center mt-4 ">Perfil de usuário</h1>
+                    <h1 class="text-center mt-4 ">Perfil de Trabalhador</h1>
                     <p class = "text-warning small"><a href="formArea.php">Clique aqui</a> para cadastrar sua área caso não a encontre na lista.</p>
-                    <p class = "text-warning small"><a href="formArea.php">Clique aqui</a> para cadastrar seu cargo caso não o encontre na lista.</p>
+                    <p class = "text-warning small"><a href="formCargo.php">Clique aqui</a> para cadastrar seu cargo caso não o encontre na lista.</p>
                     <div class="col-12 mx-auto">
                         <form method="post" id="formCargo" action="processaTrabalhador.php" enctype="multipart/form-data">
                             <div class="form-group py-3">
@@ -43,6 +43,7 @@ if($result == null || $result2 == null){
                                     $html.="<option value='".$row['id']."'>".$row['nome']."</option>";
                                 }
 $html.='                        </select>
+                                <spam class="text-secondary small">Encontrou algo de errado? <a href="altPagina.php">clique aqui</a> para alterar alguma área.</spam>
                             </div>
                             <div class="form-group py-3">
                                 <label for="cargo">Cargo de trabalho desejada</label>
@@ -51,6 +52,7 @@ $html.='                        </select>
                                             $html.="<option value='".$row['id']."'>".$row['nome']."</option>";
                                     }
 $html.=' 			</select>
+                                <spam class="text-secondary small">Encontrou algo de errado? <a href="altPagina.php">clique aqui</a> para alterar algum cargo.</spam>
                             </div>
 
                             <div class="form-group py-3">

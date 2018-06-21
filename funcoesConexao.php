@@ -12,12 +12,24 @@ function listar($name, $where = null){
     return $result;
 }
 
+function deletar($name, $where){
+    $con = configDB();
+    $sql = "DELETE FROM $name  WHERE $where[0] = $where[1]";
+    if(mysqli_query($con, $sql)){
+        header("Location: formSucesso.php");
+    }else{
+        echo mysqli_error($con);
+        //header("Location: formErro.php");
+    }
+    
+}
+
 function inserir($sql){
     $con = configDB();
     if(mysqli_query($con, $sql)){
         header("Location: formSucesso.php");
     }else{
-        echo mysqli_error($con);
+        //echo mysqli_error($con);
         header("Location: formErro.php");
     }
 }

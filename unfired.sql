@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 20, 2018 at 01:15 PM
+-- Generation Time: Jun 21, 2018 at 01:18 PM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.18
 
@@ -37,9 +37,8 @@ CREATE TABLE `area` (
 
 INSERT INTO `area` (`id`, `nome`) VALUES
 (6, 'Engenharia Civil'),
-(9, 'Espelharia'),
-(5, 'Informática'),
-(8, 'Mecatrônica');
+(9, 'Geometria'),
+(5, 'Informática');
 
 -- --------------------------------------------------------
 
@@ -57,7 +56,9 @@ CREATE TABLE `cargo` (
 --
 
 INSERT INTO `cargo` (`id`, `nome`) VALUES
-(1, 'Administrador');
+(1, 'Administrador'),
+(2, 'Espelharia'),
+(3, 'Papeleira');
 
 -- --------------------------------------------------------
 
@@ -80,7 +81,8 @@ CREATE TABLE `empresa` (
 
 INSERT INTO `empresa` (`id`, `nome`, `email`, `id_area`, `descricao`, `endereco`) VALUES
 (2, 'Engenharia e cia.', 'engenhariaecia@gmail.com', 6, 'Empresa focada em assuntos engenhosos.', 'Rua dos Engenheiros do Hawuai, 222, Parque Brasil.'),
-(3, 'Informática e CIA.', 'informaticaecia@outlook.com', 5, 'Empresa tal', 'Rua da empresa,333, Parque tal, Araraquara, São Paulo');
+(3, 'Informática e CIA.', 'informaticaecia@outlook.com', 5, 'Empresa tal', 'Rua da empresa,333, Parque tal, Araraquara, São Paulo'),
+(4, 'Geometria e Cia', 'geometriaecia@gmail.com', 9, 'XABLAU BERIMBAU XLALAU MEIO NAU', 'Rua das Geometrias, 222, Parque Geométrico, São Paulo, Brazil');
 
 -- --------------------------------------------------------
 
@@ -108,7 +110,8 @@ CREATE TABLE `trabalhador` (
 
 INSERT INTO `trabalhador` (`id`, `id_area`, `id_cargo`, `nome`, `sexo`, `email`, `telefone`, `cidade_estado`, `data_nasc`, `escolaridade`, `curriculo`) VALUES
 (4, 6, 1, 'Joaocito', 'F', 'marlucisol@hotmail.com', '16997344120', 'Araraquara', '2018-06-06', 'Ensino médio completo', 'teste201806171238.docx'),
-(5, 9, 1, 'Joca da Silva', 'M', 'jocadoribeirao@gmail.com', '16999999', 'Ribeirão Preto', '2018-06-21', 'Curso superior completo', 'testeDocs201806191038.docx');
+(5, 9, 1, 'Joca da Silva', 'M', 'jocadoribeirao@gmail.com', '16999999', 'Ribeirão Preto', '2018-06-21', 'Curso superior completo', 'testeDocs201806191038.docx'),
+(6, 6, 2, 'Roberta', 'F', 'dfhju', '654564564', 'Do Sexo, na zona', '1500-06-20', 'Fundamental incompleto', 'LEITE201806200528.docx');
 
 -- --------------------------------------------------------
 
@@ -213,17 +216,17 @@ ALTER TABLE `area`
 -- AUTO_INCREMENT for table `cargo`
 --
 ALTER TABLE `cargo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `trabalhador`
 --
 ALTER TABLE `trabalhador`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- Constraints for dumped tables
 --

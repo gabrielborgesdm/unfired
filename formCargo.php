@@ -1,7 +1,22 @@
 <?php
 session_start();
+require_once 'funcoesConexao.php';
 include 'header.php';
 
+if(isset($_GET["id"])){
+    $id = $_GET["id"];
+    $result = listar("cargo", Array("id", $id));
+    if(mysqli_num_rows($result) == 1){
+        $result = mysqli_fetch_array($result); 
+        $nome = $result["nome"];
+        $_SESSION["idCargo"] = $id;
+    }else{
+        header("Location: formErro.php");
+        
+    }
+}else{
+  $id = null;  
+}
 $html='
 <section class="container-fluid mt-4 mb-5">
     <div class="row">
