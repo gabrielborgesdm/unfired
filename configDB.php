@@ -4,7 +4,7 @@ function configDB(){
 	"host" => "localhost",
 	"name" => "unfired",
 	"user" => "root",
-	"password" => "root"
+	"password" => ""
 	);
     $con = mysqli_connect($db['host'],$db['user'],$db['password'],$db['name']);
 	

@@ -39,7 +39,7 @@ if(!empty($_POST)){
         }
     }
     
-
+	
     $result = filtrar("view_empresa", $campos, $search, $orderBy, $ordenacao);
     
 }else{

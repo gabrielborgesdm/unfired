@@ -1,7 +1,7 @@
         <section class="container-fluid fixed-bottom bg-dark" id="footer">
         	<div>
 	        	<footer class="text-center text-light">
-	        		Created by Gabriel Borges on April 1st, 2018.
+	        		Created by Gabriel Borges & Igor Moraes, 2018.
 	        	</footer>
         	</div>
         </section>
