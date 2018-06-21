@@ -13,16 +13,14 @@
                 <div class="col-12">
                     <h2>O que é?</h2>
                     <hr/> 
-                    <p>
-                        Lorem ipsum pulvinar dolor justo pulvinar ipsum bibendum ut nostra lorem, ultricies diam lectus iaculis ac vehicula conubia cursus phasellus cras blandit, a sociosqu risus taciti suspendisse magna molestie quam platea. ultricies fringilla volutpat aenean porttitor nostra egestas tellus turpis, fames pulvinar tempor ad nam pulvinar erat, volutpat cubilia mauris dapibus eu tempor pulvinar.
-                    </p>
+                    <p>O unfired é um Linkedin que não deu certo, tente sua sorte!</p>
                 </div>
                 <div class="col-12">
                     <h2>Objetivo?</h2>
                     <hr />
                     <p>
-                        Condimentum ligula sociosqu feugiat semper condimentum consequat torquent quisque suscipit, sapien diam lacinia ut pretium eu class at, arcu tempor accumsan sapien dictum massa id eros. vivamus commodo mollis velit viverra ullamcorper tempor fames sed viverra, odio non pretium erat nostra iaculis taciti. 
-                    </p>
+						Temos como objetivo facilitar sua vida, ache seu emprego ou funcionário dos sonhos!
+					</p>
                 </div>
             </div>
         </div>
