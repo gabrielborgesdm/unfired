@@ -34,8 +34,8 @@
                             Cadastrar
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropCadastro">
-                            <a class="dropdown-item" href="formTrabalhador.php">Perfil de trabalho</a>
-                            <a class="dropdown-item" href="formEmpresa.php">Perfil de Empresa</a>
+                            <a class="dropdown-item" href="formTrabalhador.php">Trabalhador</a>
+                            <a class="dropdown-item" href="formEmpresa.php">Empresa</a>
                         </div>
                     </li>
 

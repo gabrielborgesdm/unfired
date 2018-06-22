@@ -18,8 +18,8 @@ function deletar($name, $where){
     if(mysqli_query($con, $sql)){
         header("Location: formSucesso.php");
     }else{
-        echo mysqli_error($con);
-        //header("Location: formErro.php");
+        //echo mysqli_error($con);
+        header("Location: formErro.php");
     }
     
 }
